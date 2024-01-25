@@ -1,7 +1,5 @@
 Connection sample to VISA Sandbox using two-way SSL with Spring Boot
 
-To run the application you're gonna need create a project in Visa Sandbox and select the two-way SSL "".
-
 The first step is to create a project in the VISA sandbox environment (https://developer.visa.com/) and using the `Mutual Authentication`.
 
 Once the project is created, you will be provided with a private key, certificate, and authorization credentials. 

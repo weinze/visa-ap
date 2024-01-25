@@ -1,6 +1,10 @@
 spring:
   profiles.active: dev
 
+server:
+  servlet:
+    context-path: /visa
+
 visa:
   rootUri: https://sandbox.api.visa.com
   keystore:
