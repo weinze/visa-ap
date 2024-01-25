@@ -1,0 +1,11 @@
+spring:
+  profiles.active: test
+
+visa:
+  rootUri: https://sandbox.api.visa.com
+  keystore:
+    file: keystore.jks
+    password:
+  project:
+    userId:
+    password:
