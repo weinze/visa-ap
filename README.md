@@ -58,3 +58,22 @@ Now that everything is configured you can run the application:
 The application should be running in `http://127.0.0.1:8080/visa/helloworld` 
 
 ---
+
+### Implementation improvements
+
+- `RestTemplate` bean
+
+The way it is done, Visa project credentials are sent in all the requests of the `RestTemplate`. 
+If it is necessary to use different credentials with the same `restTemplate`, the credentials configuration should be moved to `VisaClient` instead:
+
+```
+restTemplate.getInterceptors().add(new BasicAuthenticationInterceptor("username", "password"));
+restTemplate.get....
+```
+
+Since `restTemplate` is instantiated at application startup, it is difficult to test for invalid credentials/certificates.
+With the credentials change mentioned above, it might be easier to test how the app reacts to a failed authentication.
+
+- API
+
+Set up Swagger to view the API provided by the application
